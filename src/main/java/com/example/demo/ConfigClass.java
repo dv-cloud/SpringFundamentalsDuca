@@ -9,18 +9,11 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(value="com.example.demo")
 public class ConfigClass {
     @Bean
-    @Qualifier("lawyer")
     public Employee getEmployee(){
        String name = "Lawyer";
        return new Employee(name);
     }
 
-    @Bean
-    @Qualifier("doctor")
-    public Employee getEmployee2(){
-        String name = "Doctor";
-        return new Employee(name);
-    }
 
     @Bean
     public SelfEmployed getSelfEmployed(){
